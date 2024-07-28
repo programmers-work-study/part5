@@ -763,8 +763,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.75rem;
 }
 
-.text-5xl {
-    font-size: 3rem;
+.text-xl {
+    font-size: 1.25rem;
     line-height: 1;
 }
 
