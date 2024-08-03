@@ -1,4 +1,4 @@
-import { inputAutoFocus } from './utils/index.js'
+import { changeFontSize, inputAutoFocus } from './utils/index.js'
 import {
     validateId,
     validatePassword,
@@ -17,7 +17,29 @@ const $confirmPassword = document.getElementById('confirm-pw')
 const $closeModalButton = document.getElementById('cancel-btn')
 const $approveButton = document.getElementById('approve-btn')
 
+const $html = document.documentElement
+const $increaseFontButton = document.getElementById('increase-font-btn')
+const $decreaseFontButton = document.getElementById('decrease-font-btn')
+
 inputAutoFocus($idInput)
+
+$increaseFontButton.addEventListener('click', () => {
+    changeFontSize({
+        change: 1,
+        target: $html,
+        $increaseFontButton,
+        $decreaseFontButton,
+    })
+})
+
+$decreaseFontButton.addEventListener('click', () => {
+    changeFontSize({
+        change: -1,
+        target: $html,
+        $increaseFontButton,
+        $decreaseFontButton,
+    })
+})
 
 $idInput.addEventListener('focusout', () => {
     checkValidation($idInput, validateId)

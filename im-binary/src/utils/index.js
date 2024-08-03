@@ -5,3 +5,4 @@ export {
     checkPassword,
     checkValidation,
 } from './validation.js'
+export { changeFontSize } from './changeFontSize.js'
