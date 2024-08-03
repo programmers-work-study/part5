@@ -11,6 +11,11 @@ const $passwordInput = document.getElementById('pw')
 const $passwordCheckInput = document.getElementById('pw-check')
 
 const $submitButton = document.getElementById('submit')
+const $modal = document.getElementById('modal')
+const $confirmId = document.getElementById('confirm-id')
+const $confirmPassword = document.getElementById('confirm-pw')
+const $closeModalButton = document.getElementById('cancel-btn')
+const $approveButton = document.getElementById('approve-btn')
 
 inputAutoFocus($idInput)
 
@@ -38,8 +43,17 @@ $submitButton.addEventListener('click', (e) => {
     )
 
     if (isValidId && isValidPassword && isValidPasswordCheck) {
-        alert('회원가입 성공!')
-    } else {
-        alert('회원가입 실패!')
+        $confirmId.textContent = $idInput.value
+        $confirmPassword.textContent = $passwordInput.value
+        $modal.showModal()
     }
+})
+
+$closeModalButton.addEventListener('click', () => {
+    $modal.close()
+})
+
+$approveButton.addEventListener('click', () => {
+    alert('가입되었습니다 🥳')
+    $modal.close()
 })
