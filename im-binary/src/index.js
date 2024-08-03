@@ -1,1 +1,5 @@
-// TODO: 이 곳에 정답 코드를 작성해주세요.
+import { inputAutoFocus } from './utils/index.js'
+
+const $idInput = document.querySelector('#id')
+
+inputAutoFocus($idInput)
