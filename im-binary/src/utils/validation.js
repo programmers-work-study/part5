@@ -30,16 +30,16 @@ export function checkValidation($input, validationFunc) {
     const value = $input.value
 
     if (value.trim() === '') {
-        $input.classList.add('invalid')
+        $input.classList.add('border-red-600')
         setErrorMessage($input, errorMessage({ type: 'required' }))
         return false
     }
     if (validationFunc(value)) {
-        $input.classList.remove('invalid')
+        $input.classList.remove('border-red-600')
         setErrorMessage($input, '')
         return true
     } else {
-        $input.classList.add('invalid')
+        $input.classList.add('border-red-600')
         setErrorMessage($input, errorMessage({ type: $input.id }))
         return false
     }
