@@ -6,11 +6,11 @@ import {
     checkValidation,
 } from './utils/index.js'
 
-const $idInput = document.querySelector('#id')
-const $passwordInput = document.querySelector('#pw')
-const $passwordCheckInput = document.querySelector('#pw-check')
+const $idInput = document.getElementById('id')
+const $passwordInput = document.getElementById('pw')
+const $passwordCheckInput = document.getElementById('pw-check')
 
-const $submitButton = document.querySelector('#submit')
+const $submitButton = document.getElementById('submit')
 
 inputAutoFocus($idInput)
 
