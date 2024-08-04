@@ -13,10 +13,9 @@
         "url": "https://github.com/hanameee/mini-signup-form/issues"
     },
     "homepage": "https://github.com/hanameee/mini-signup-form#readme",
-    "dependencies": {},
     "devDependencies": {
-        "eslint": "^8.6.0",
-        "eslint-config-prettier": "^8.3.0",
-        "prettier": "^2.5.1"
+        "eslint": "^9.8.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.3.3"
     }
 }
